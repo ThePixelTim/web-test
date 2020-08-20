@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dropdown menu!</title>
+    <meta charset="utf-8">
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+    <script>
+        var i = 0;
+        var score = 0;
+
+        function alertTest()
+        {
+            var audio = new Audio('click.mp3');
+            audio.play();
+
+            i++;
+            score += Math.ceil(Math.random(10, 20) * 10);
+
+            alert("You have clicked this button " + i + " times!");
+            document.getElementById("score").innerHTML = "Score: " + score;
+        }
+    </script>
+</head>
+    <body>
+        <nav>
+            <p>Dropdown, inc</p>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#">Links</a>
+                    <ul>
+                        <li><a href="#">Link1</a></li>
+                        <li><a href="#">Link2</a></li>
+                        <li><a href="#">Link4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+        </nav>
+        <center>
+            <br />
+            <br />
+            <br />
+            <h2 style="color:lightgray">CHALLENGE: press this button as many times as possible!</h2>
+            <br />
+            <br />
+            <br />
+            <br />
+            <a href="http://html.net" onclick="alertTest(); return false;" class="button">CLICK ME!!!</a>
+            <br />
+            <br />
+            <br />
+            <br />
+            <p id="score" style="color:lightgray">Score: 0</p>
+        </center>
+    </body>
+</html>
